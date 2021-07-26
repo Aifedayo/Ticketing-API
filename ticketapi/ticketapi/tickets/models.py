@@ -13,3 +13,8 @@ class Ticket(models.Model):
     content = models.TextField()
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     ticket_id = models.CharField(max_length=255, blank=True)
+    created = models.DateTimeField(auto_now=True)
+    modified = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "{} - {}".format(self.title, self.ticket_id)
