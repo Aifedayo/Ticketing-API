@@ -18,3 +18,7 @@ class Ticket(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.title, self.ticket_id)
+
+    def save(self, *args, **kwargs):
+        if len(self.ticket_id.strip(" "))==0:
+            self.ticket_id = generate_ticket_id()
