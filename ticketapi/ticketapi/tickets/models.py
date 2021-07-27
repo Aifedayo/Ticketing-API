@@ -22,3 +22,8 @@ class Ticket(models.Model):
     def save(self, *args, **kwargs):
         if len(self.ticket_id.strip(" "))==0:
             self.ticket_id = generate_ticket_id()
+
+            super(Ticket, self).save(*args, **kwargs)
+    
+    class Meta:
+        ordering = ['-created']
