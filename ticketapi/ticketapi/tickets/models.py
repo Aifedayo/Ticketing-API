@@ -27,3 +27,8 @@ class Ticket(models.Model):
     
     class Meta:
         ordering = ['-created']
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=255)
+    slug = models.SlugField()
