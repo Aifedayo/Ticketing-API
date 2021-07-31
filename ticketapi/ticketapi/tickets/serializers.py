@@ -7,3 +7,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'is_staff')
+
+
+class TicketSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Ticket
+        fields = ('id', 'title', 'ticket_id', 'user', 'content', 'category', 'created', 'modified')
