@@ -4,3 +4,8 @@ from ticketapi.serializers import UserSerializer, TicketSerializer, CategorySeri
 
 from django.contrib.auth.models import User
 from tickets.models import Ticket, Category
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
