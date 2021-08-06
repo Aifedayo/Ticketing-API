@@ -20,6 +20,8 @@ from django.contrib.auth.models import User
 from tickets.models import Ticket, Category
 from rest_framework import routers
 
+from tickets.views import UserViewSet, TicketViewSet, CategoryViewSet
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
