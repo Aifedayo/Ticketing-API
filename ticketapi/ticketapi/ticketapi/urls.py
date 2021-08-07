@@ -22,6 +22,9 @@ from rest_framework import routers
 
 from tickets.views import UserViewSet, TicketViewSet, CategoryViewSet
 
+router.register(r'api/users', UserViewSet)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
