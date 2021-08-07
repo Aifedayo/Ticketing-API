@@ -22,6 +22,8 @@ from rest_framework import routers
 
 from tickets.views import UserViewSet, TicketViewSet, CategoryViewSet
 
+router = routers.DefaultRouter()
+
 router.register(r'api/users', UserViewSet)
 
 
