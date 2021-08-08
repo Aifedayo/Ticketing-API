@@ -25,6 +25,7 @@ from tickets.views import UserViewSet, TicketViewSet, CategoryViewSet
 router = routers.DefaultRouter()
 
 router.register(r'api/users', UserViewSet)
+router.register(r'api/tickets', TicketViewSet)
 
 
 urlpatterns = [
