@@ -32,4 +32,5 @@ router.register(r'api/category', CategoryViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include(router.urls)),
+    path(r'api/', include('rest_framework.urls', namespace='rest_framework'))
 ]
