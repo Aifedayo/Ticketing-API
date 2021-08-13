@@ -12,6 +12,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 # Rewriting our UserSerializer
 class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField()
+    username = serializers.CharField(max_length=200)
 
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
