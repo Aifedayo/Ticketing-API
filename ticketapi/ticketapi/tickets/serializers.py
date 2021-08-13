@@ -13,6 +13,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     username = serializers.CharField(max_length=200)
+    password = serializers.CharField(max_length=100, style={"input_type":"password"})
 
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
