@@ -16,6 +16,9 @@ class UserSerializer(serializers.Serializer):
     password = serializers.CharField(max_length=100, style={"input_type":"password"})
     is_staff = serializers.BooleanField(default=False)
 
+    def create(self, **validated_data):
+        """The function called whrn you create a new User object/instance"""
+
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
