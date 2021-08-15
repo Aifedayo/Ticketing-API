@@ -17,7 +17,7 @@ class UserSerializer(serializers.Serializer):
     is_staff = serializers.BooleanField(default=False)
 
     def create(self, **validated_data):
-        """The function called whrn you create a new User object/instance"""
+        """The function called when you create a new User object/instance"""
 
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
