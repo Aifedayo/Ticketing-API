@@ -19,6 +19,8 @@ class UserSerializer(serializers.Serializer):
     def create(self, **validated_data):
         """The function called when you create a new User object/instance"""
 
+        return User.objects.create(**validated_data)
+
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
