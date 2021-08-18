@@ -25,6 +25,8 @@ class UserSerializer(serializers.Serializer):
         """
         Update and return an existing User instance
         """
+        instance.username = validated_data.get('username', instance.username)
+        instance.password = validated_data.get('password', instance.password)
 
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
