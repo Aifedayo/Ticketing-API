@@ -20,6 +20,11 @@ class UserSerializer(serializers.Serializer):
         """The function called when you create a new User object/instance"""
 
         return User.objects.create(**validated_data)
+    
+    def update(self, instance, validated_data):
+        """
+        Update and return an existing User instance
+        """
 
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
