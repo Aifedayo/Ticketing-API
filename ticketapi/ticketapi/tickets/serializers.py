@@ -27,6 +27,8 @@ class UserSerializer(serializers.Serializer):
         """
         instance.username = validated_data.get('username', instance.username)
         instance.password = validated_data.get('password', instance.password)
+        instance.is_staff = validated_data.get('is_staff', instance.is_staff)
+        instance.save()
 
 
 class TicketSerializer(serializers.HyperlinkedModelSerializer):
